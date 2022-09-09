@@ -7,6 +7,9 @@ class TypewiseTest(unittest.TestCase):
     self.assertTrue(typewise_alert.infer_breach(20, 50, 100) == 'TOO_LOW')
   def test_infers_breach_as_per_limits(self):
     self.assertTrue(typewise_alert.infer_breach(160, 50, 100) == 'TOO_HIGH')
+  def test_infers_breach_as_per_limits(self):
+    self.assertTrue(typewise_alert.infer_breach(60, 50, 100) == 'NORMAL')
+
 
  
 
