@@ -15,3 +15,4 @@ class TypewiseTest(unittest.TestCase):
 
 if __name__ == '__main__':
   unittest.main()
+  check_and_alert("TO_CONTROLLER", "PASSIVE_COOLING", 30)
