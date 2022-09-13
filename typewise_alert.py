@@ -1,7 +1,10 @@
-
-def infer_breach(value, lowerLimit, upperLimit):
+def check_lower_lim(value, lowerLimit):
   if value < lowerLimit:
     return 'TOO_LOW'
+
+
+def infer_breach(value, lowerLimit, upperLimit):
+  check_lower_lim(value, lowerLimit)
   if value > upperLimit:
     return 'TOO_HIGH'
   return 'NORMAL'
