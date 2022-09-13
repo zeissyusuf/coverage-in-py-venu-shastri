@@ -13,6 +13,8 @@ class TypewiseTest(unittest.TestCase):
     typewise_alert.infer_breach(50, 50, 50)
   def test_check_and_aleart(self):
     typewise_alert.infer_breach(30, 30, 30)
+  def test_check_temp(self):
+    self.assertTrue(typewise_alert.classify_temperature_breach("", 30)
 
 
 if __name__ == '__main__':
