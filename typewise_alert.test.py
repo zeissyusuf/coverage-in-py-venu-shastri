@@ -15,8 +15,8 @@ class TypewiseTest(unittest.TestCase):
     typewise_alert.infer_breach(30, 30, 30)
   def test_check_temp_Normal(self):
     self.assertTrue(typewise_alert.classify_temperature_breach("PASSIVE_COOLING", 30)=="NORMAL")
-  def test_check_temp_High(self):
-    self.assertTrue(typewise_alert.classify_temperature_breach("HIGH_ACTIVE_COOLING", 30)=="NORMAL")
+  def test_check_temp_Normal_High(self):
+    self.assertTrue(typewise_alert.classify_temperature_breach("PASSIVE_COOLING", 40)=="TOO_HIGH")
 
 
 if __name__ == '__main__':
